@@ -11,7 +11,7 @@ const ListComponent = ({listObj, listRef})=>{
   return (
     <div className={styles.content}>
       <h1 className={styles.title}>{listObj.name}</h1>
-      { listObj.list.map((v,i)=><EachList v={v}/>) }
+      { listObj.list.map((v,i)=><EachList key={v.id} v={v}/>) }
     </div>
   )
 }

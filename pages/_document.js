@@ -3,6 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 
 export default class MyDocument extends Document {
+  displayName =  'MyDocument'
   render() {
     return (
       <Html lang="en">
