@@ -3,7 +3,6 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 
 export default class MyDocument extends Document {
-  displayName =  'MyDocument'
   render() {
     return (
       <Html lang="en">
@@ -21,7 +20,7 @@ export default class MyDocument extends Document {
     );
   }
 }
-
+MyDocument.displayName = 'MyDocument';
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with server-side generation (SSG).
 MyDocument.getInitialProps = async (ctx) => {
