@@ -27,18 +27,15 @@ export default function List({ list : listObj, isPrivate, listRef }) {
 export async function getServerSideProps(context) {
   try{
     const { data : list } = await api.get('/api/list/'+context.params.ref)
-    console.log(list)
     if (!list) {
       return {
         notFound: true,
       }
     }
-    console.log(list)
     return {
       props: { list, isPrivate: false, listRef: context.params.ref }, // will be passed to the page component as props
     }
   }catch(err){
-    console.log(err.response)
     if (err.response.data.code === 90) {
       return {
         notFound: true,
