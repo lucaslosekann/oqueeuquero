@@ -11,12 +11,12 @@ const ListComponent = ({listObj, listRef})=>{
   return (
     <div className={styles.content}>
       <h1 className={styles.title}>{listObj.name}</h1>
-      { listObj.list.map((v,i)=><EachList key={v.id} v={v}/>) }
+      { listObj.list.map((v,i)=><EachList key={v.id} v={v} listRef={listRef} />) }
     </div>
   )
 }
 
-const EachList = ({v}) => {
+const EachList = ({v, listRef}) => {
   const [checked, setChecked] = useState(v.checked)
   const [open, setOpen] = useState(false)
   const [dOpen, setDOpen] = useState(false);
