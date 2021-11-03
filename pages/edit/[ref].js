@@ -101,7 +101,7 @@ export default function EditList({list:{list, name: listName, id: listId}, listR
     <div className={styles.container}>
     <div className={styles.content}>
         <div className={styles.left}>
-        <h1><Link href={`/list/${listName}`}>{listName}</Link></h1>
+        <h1><Link href={`/list/${listRef}`}>{listName}</Link></h1>
           <form onSubmit={handleSubmit(handleAddListItem)} className={styles.inputs}>
             <h2>Adicionar item na lista</h2>
             <div>
