@@ -45,6 +45,7 @@ const EachList = ({v, listRef}) => {
       checked={!!checked}
       disabled={!!checked}
       onChange={handleChange}/>
+      AA
       <h2 className={styles.itemDescription} onClick={()=>setOpen(true)}>
         {v.description}
       </h2>
